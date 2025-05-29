@@ -418,6 +418,37 @@ function App() {
             />
             <CategoryLegend />
           </div>
+          {/* Add Task FAB */}
+          <button
+            className="btn btn-large fab-add-task"
+            type="button"
+            aria-label="Add Task"
+            onClick={handleAddTaskClick}
+            style={{
+              position: "fixed",
+              bottom: 38,
+              right: 38,
+              zIndex: 1200,
+              background: "var(--kavia-orange)",
+              color: "white",
+              borderRadius: "50%",
+              width: 62,
+              height: 62,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "2.3rem",
+              fontWeight: 700,
+              boxShadow: "0 5px 24px 0 rgba(232, 122, 65, 0.18)",
+              border: "none",
+              transition: "background .2s"
+            }}
+            onMouseOver={e => (e.currentTarget.style.background = "#FF8B4D")}
+            onMouseOut={e => (e.currentTarget.style.background = "var(--kavia-orange)")}
+            tabIndex={0}
+          >
+            +
+          </button>
           {/* Calendar */}
           <div
             style={{
