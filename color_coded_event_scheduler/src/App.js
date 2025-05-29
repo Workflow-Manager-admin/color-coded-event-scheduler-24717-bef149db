@@ -388,7 +388,13 @@ function App() {
           padding: "2px 6px",
         }}
       >
-        <b>{eventInfo.timeText}</b> <span>{eventInfo.event.title}</span>
+        <b>{eventInfo.timeText}</b>{" "}
+        <span
+          className="fc-event-title-ellipsis"
+          title={eventInfo.event.title}
+        >
+          {eventInfo.event.title}
+        </span>
       </div>
     );
   }
