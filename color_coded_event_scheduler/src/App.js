@@ -262,6 +262,30 @@ function App() {
     });
   }
 
+  // Handler for FAB 'Add Task' button (defaults to today)
+  function handleAddTaskClick() {
+    const today = new Date();
+    // yyyy-MM-ddTHH:mm for local input date format
+    const pad = (n) => (n < 10 ? `0${n}` : `${n}`);
+    const dateStr =
+      today.getFullYear() +
+      "-" +
+      pad(today.getMonth() + 1) +
+      "-" +
+      pad(today.getDate()) +
+      "T09:00";
+    setDialogState({
+      open: true,
+      isEdit: false,
+      event: {
+        title: "",
+        start: dateStr,
+        end: dateStr,
+        extendedProps: { category: "work" },
+      },
+    });
+  }
+
   // Handler for event clicking (edit)
   function handleEventClick(clickInfo) {
     setDialogState({
