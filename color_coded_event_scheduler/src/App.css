@@ -256,6 +256,26 @@ body {
   box-sizing: border-box;
   font-weight: 500;
   font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* Added gap for clarity between time and title */
+}
+
+.fc-event-title-ellipsis {
+  display: inline-block;
+  max-width: 110px;
+  /* This value may be adjusted as needed for container width */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .fc-event-title-ellipsis {
+    max-width: 60px;
+  }
 }
 
 /* Modal/Dialog styles for event create/edit */
