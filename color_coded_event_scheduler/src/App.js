@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import "./App.css";
-import "@fullcalendar/core/index.css";
 import "@fullcalendar/daygrid/index.css";
 import "@fullcalendar/timegrid/index.css";
 import FullCalendar from "@fullcalendar/react";
