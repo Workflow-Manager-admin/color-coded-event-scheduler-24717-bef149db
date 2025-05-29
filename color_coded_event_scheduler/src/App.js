@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./App.css";
-import "@fullcalendar/daygrid/main.css";
-import "@fullcalendar/timegrid/main.css";
+import "@fullcalendar/daygrid/main.min.css";
+import "@fullcalendar/timegrid/main.min.css";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
