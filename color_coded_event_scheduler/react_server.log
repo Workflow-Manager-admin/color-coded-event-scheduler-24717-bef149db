@@ -111,3 +111,33 @@ ERROR in ./src/App.js 14:0-58
 Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
 
 webpack compiled with 7 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/core/index.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+WARNING in [eslint] 
+src/App.js
+  Line 31:10:  'getCategoryByKey' is defined but never used  no-unused-vars
+
+ERROR in ./src/App.js 8:0-38
+Module not found: Error: Can't resolve '@fullcalendar/core/index.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/App.js 9:0-41
+Module not found: Error: Can't resolve '@fullcalendar/daygrid/index.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/App.js 10:0-42
+Module not found: Error: Can't resolve '@fullcalendar/timegrid/index.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/App.js 11:0-47
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/App.js 12:0-50
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/App.js 13:0-52
+Module not found: Error: Can't resolve '@fullcalendar/timegrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/App.js 14:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+webpack compiled with 7 errors and 1 warning
