@@ -301,3 +301,18 @@ ERROR in ./src/App.js 9:0-42
 Module not found: Error: Package path ./index.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid/package.json)
 
 webpack compiled with 2 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Package path ./main.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+WARNING in [eslint] 
+src/App.js
+  Line 30:10:  'getCategoryByKey' is defined but never used  no-unused-vars
+
+ERROR in ./src/App.js 8:0-40
+Module not found: Error: Package path ./main.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+
+ERROR in ./src/App.js 9:0-41
+Module not found: Error: Package path ./main.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid/package.json)
+
+webpack compiled with 2 errors and 1 warning
