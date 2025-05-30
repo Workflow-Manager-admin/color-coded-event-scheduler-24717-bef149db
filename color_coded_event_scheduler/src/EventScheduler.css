@@ -1,0 +1,196 @@
+.scheduler-root {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 48px 0 32px 0;
+  min-height: 100vh;
+  background: var(--kavia-dark, #181818);
+  color: var(--text-color, #fff);
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+.scheduler-controls {
+  min-width: 225px;
+  max-width: 260px;
+  background: #181F2A;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.16);
+  margin-left: 36px;
+  margin-top: 0;
+  padding: 28px 24px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+}
+
+.section-title {
+  color: var(--text-secondary, #97a2b7);
+  text-transform: uppercase;
+  font-size: 0.96rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.scheduler-filter {
+  margin-bottom: 10px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  cursor: pointer;
+  font-size: 1.02em;
+}
+
+.swatch {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.scheduler-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 6px;
+}
+
+.scheduler-legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  font-size: 1.04em;
+}
+
+.scheduler-calendar {
+  flex: 1 1 0;
+  margin-left: 48px;
+  margin-top: 0px;
+  background: transparent;
+}
+
+/* FullCalendar dark adjustment */
+.fc {
+  background: transparent;
+  color: var(--text-color, #fff);
+}
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard td, .fc-theme-standard th {
+  border-color: #282d37;
+}
+.fc-day-today {
+  background-color: rgba(25, 118, 210,0.10) !important;
+}
+.fc-toolbar-title {
+  font-size: 1.48rem;
+  color: var(--text-color, #fff);
+  letter-spacing: 0.01em;
+}
+.fc-button {
+  background: var(--kavia-orange, #E87A41);
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.fc-button:hover,
+.fc-button:focus {
+  background: #FF8B4D;
+}
+.fc-button.fc-button-active, .fc-button:active {
+  background: var(--kavia-dark, #222);
+}
+
+/* Modal/dialog styles */
+.modal-overlay {
+  position: fixed;
+  z-index: 2000;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(15,18,32,0.66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-dialog {
+  background: #1a2032;
+  color: #fff;
+  min-width: 370px;
+  padding: 28px 32px 28px 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 36px #000a;
+  position: relative;
+  font-size: 1.06em;
+}
+.dialog-title {
+  font-size: 1.28em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--kavia-orange, #E87A41);
+  text-align: left;
+}
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 6px;
+  color: var(--text-secondary, #aaa);
+  font-size: 1em;
+}
+input[type="text"], input[type="date"] {
+  background: #23263b;
+  border: 1px solid #313448;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1em;
+  outline: none;
+}
+input[type="text"]:focus, input[type="date"]:focus {
+  border-color: var(--kavia-orange, #E87A41);
+}
+
+.category-selectors label {
+  margin-right: 16px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 9px;
+}
+.btn {
+  background: var(--kavia-orange, #E87A41);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.btn.btn-primary {
+  background: #1976d2;
+}
+.btn.btn-danger {
+  background: #d32f2f;
+}
+
+.btn:hover {
+  filter: brightness(1.13);
+}
