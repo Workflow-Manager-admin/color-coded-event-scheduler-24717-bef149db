@@ -147,9 +147,32 @@ export default function EventScheduler() {
     );
   }
 
+  // Handler for opening the Add Task dialog with default values
+  // PUBLIC_INTERFACE
+  function handleAddTaskClick() {
+    const todayStr = new Date().toISOString().substr(0, 10);
+    setDialogEvent({
+      id: null,
+      title: '',
+      start: todayStr,
+      category: CATEGORY_CONFIG[0].value
+    });
+    setDialogOpen(true);
+  }
+
   return (
     <div className="scheduler-root">
       <aside className="scheduler-controls">
+        {/* Add Task Button */}
+        <button
+          className="btn btn-large"
+          style={{ marginBottom: 20 }}
+          onClick={handleAddTaskClick}
+          aria-label="Add Task"
+          type="button"
+        >
+          + Add Task
+        </button>
         <div className="scheduler-filter">
           <span className="section-title">Filter by Category:</span>
           {CATEGORY_CONFIG.map(cat => (
@@ -221,7 +244,7 @@ export default function EventScheduler() {
           <div className="event-dialog">
             <form onSubmit={handleDialogSave} autoComplete="off">
               <div className="dialog-title">
-                {dialogEvent && dialogEvent.id ? 'Edit Event' : 'Add Event'}
+                {dialogEvent && dialogEvent.id ? 'Edit Event' : 'Add Task'}
               </div>
               <div className="form-group">
                 <label htmlFor="title">Title</label>
@@ -269,7 +292,7 @@ export default function EventScheduler() {
                 </div>
               </div>
               <div className="dialog-actions">
-                <button type="submit" className="btn btn-primary">Save</button>
+                <button type="submit" className="btn btn-primary">OK</button>
                 <button type="button" className="btn" onClick={handleDialogClose}>Cancel</button>
                 {dialogEvent?.id && (
                   <button type="button" className="btn btn-danger" onClick={handleEventDelete}>Delete</button>
