@@ -39,3 +39,107 @@ ERROR in ./src/ColorCodedEventScheduler.js 10:0-40
 Module not found: Error: Can't resolve '@fullcalendar/daygrid/main.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
 
 webpack compiled with 4 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/interaction isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 16 hidden lines
+
+WARNING in [eslint] 
+src/ColorCodedEventScheduler.js
+  Line 14:7:  'COLOR_PALETTE' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/ColorCodedEventScheduler.js 7:0-47
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/ColorCodedEventScheduler.js 8:0-50
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/ColorCodedEventScheduler.js 9:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/ColorCodedEventScheduler.js 10:0-40
+Module not found: Error: Can't resolve '@fullcalendar/daygrid/main.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+webpack compiled with 4 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/core isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+WARNING in [eslint] 
+src/ColorCodedEventScheduler.js
+  Line 14:7:  'COLOR_PALETTE' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/ColorCodedEventScheduler.js 9:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/ColorCodedEventScheduler.js 10:0-40
+Module not found: Error: Can't resolve '@fullcalendar/daygrid/main.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./node_modules/@fullcalendar/daygrid/index.js 1:0-59
+Module not found: Error: Can't resolve '@fullcalendar/core/index.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/daygrid/index.js 3:0-40
+Module not found: Error: Can't resolve '@fullcalendar/core/internal.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/daygrid/index.js 4:0-38
+Module not found: Error: Can't resolve '@fullcalendar/core/preact.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/daygrid/internal.js 1:0-733
+Module not found: Error: Can't resolve '@fullcalendar/core/internal.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/daygrid/internal.js 2:0-82
+Module not found: Error: Can't resolve '@fullcalendar/core/preact.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/react/dist/index.js 3:0-46
+Module not found: Error: Can't resolve '@fullcalendar/core' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react/dist'
+
+ERROR in ./node_modules/@fullcalendar/react/dist/index.js 4:0-67
+Module not found: Error: Can't resolve '@fullcalendar/core/internal' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react/dist'
+
+webpack compiled with 9 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Package path ./main.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+WARNING in [eslint] 
+src/ColorCodedEventScheduler.js
+  Line 14:7:  'COLOR_PALETTE' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/ColorCodedEventScheduler.js 10:0-40
+Module not found: Error: Package path ./main.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Package path ./main.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+WARNING in [eslint] 
+src/ColorCodedEventScheduler.js
+  Line 14:7:  'COLOR_PALETTE' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/ColorCodedEventScheduler.js 10:0-40
+Module not found: Error: Package path ./main.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Package path ./index.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+WARNING in [eslint] 
+src/ColorCodedEventScheduler.js
+  Line 14:7:  'COLOR_PALETTE' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/ColorCodedEventScheduler.js 10:0-41
+Module not found: Error: Package path ./index.css is not exported from package /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid (see exports field in /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid/package.json)
+
+webpack compiled with 1 error and 1 warning
