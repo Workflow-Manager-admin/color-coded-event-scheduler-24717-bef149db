@@ -21,3 +21,20 @@ webpack compiled successfully
 Compiling...
 Compiled successfully!
 webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+ERROR in ./src/EventScheduler.js 6:0-47
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 7:0-50
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 8:0-52
+Module not found: Error: Can't resolve '@fullcalendar/timegrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 9:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+webpack compiled with 4 errors
