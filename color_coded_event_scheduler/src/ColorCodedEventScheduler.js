@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import "@fullcalendar/daygrid/index.css";
+/* DayGrid CSS import removed for FullCalendar v6+; handled internally */
 
 // Category definitions and color palette
 const CATEGORY_DEFS = [
