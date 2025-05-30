@@ -18,3 +18,24 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+WARNING in [eslint] 
+src/ColorCodedEventScheduler.js
+  Line 14:7:  'COLOR_PALETTE' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/ColorCodedEventScheduler.js 7:0-47
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/ColorCodedEventScheduler.js 8:0-50
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/ColorCodedEventScheduler.js 9:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/ColorCodedEventScheduler.js 10:0-40
+Module not found: Error: Can't resolve '@fullcalendar/daygrid/main.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+webpack compiled with 4 errors and 1 warning
