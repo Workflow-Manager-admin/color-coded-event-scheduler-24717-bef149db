@@ -35,3 +35,93 @@ ERROR in ./src/EventScheduler.js 27:0-58
 Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
 
 webpack compiled with 4 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/interaction isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 16 hidden lines
+
+ERROR in ./src/EventScheduler.js 24:0-47
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 25:0-50
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 26:0-52
+Module not found: Error: Can't resolve '@fullcalendar/timegrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 27:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+webpack compiled with 4 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/core isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+ERROR in ./src/EventScheduler.js 25:0-50
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 26:0-52
+Module not found: Error: Can't resolve '@fullcalendar/timegrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 27:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./node_modules/@fullcalendar/react/dist/index.js 3:0-46
+Module not found: Error: Can't resolve '@fullcalendar/core' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react/dist'
+
+ERROR in ./node_modules/@fullcalendar/react/dist/index.js 4:0-67
+Module not found: Error: Can't resolve '@fullcalendar/core/internal' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react/dist'
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/core/index.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/core isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 15 hidden lines
+
+ERROR in ./node_modules/@fullcalendar/daygrid/index.js 1:0-59
+Module not found: Error: Can't resolve '@fullcalendar/core/index.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/daygrid/index.js 3:0-40
+Module not found: Error: Can't resolve '@fullcalendar/core/internal.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/daygrid/internal.js 1:0-733
+Module not found: Error: Can't resolve '@fullcalendar/core/internal.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/daygrid'
+
+ERROR in ./node_modules/@fullcalendar/interaction/index.js 1:0-59
+Module not found: Error: Can't resolve '@fullcalendar/core/index.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/interaction'
+
+ERROR in ./node_modules/@fullcalendar/interaction/index.js 2:0-953
+Module not found: Error: Can't resolve '@fullcalendar/core/internal.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/interaction'
+
+ERROR in ./node_modules/@fullcalendar/react/dist/index.js 3:0-46
+Module not found: Error: Can't resolve '@fullcalendar/core' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react/dist'
+
+ERROR in ./node_modules/@fullcalendar/react/dist/index.js 4:0-67
+Module not found: Error: Can't resolve '@fullcalendar/core/internal' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/react/dist'
+
+ERROR in ./node_modules/@fullcalendar/timegrid/index.js 1:0-59
+Module not found: Error: Can't resolve '@fullcalendar/core/index.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid'
+
+ERROR in ./node_modules/@fullcalendar/timegrid/index.js 3:0-40
+Module not found: Error: Can't resolve '@fullcalendar/core/internal.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid'
+
+ERROR in ./node_modules/@fullcalendar/timegrid/internal.js 1:0-858
+Module not found: Error: Can't resolve '@fullcalendar/core/internal.js' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/node_modules/@fullcalendar/timegrid'
+
+webpack compiled with 10 errors
+Compiling...
+Compiled successfully!
+webpack compiled successfully
