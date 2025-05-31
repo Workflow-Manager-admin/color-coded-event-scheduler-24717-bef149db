@@ -44,8 +44,7 @@ const DIALOG_INIT_STATE = {
   isEdit: false,
   id: null,
   title: '',
-  start: '',
-  end: '',
+  date: '',
   category: 'Work',
 };
 
