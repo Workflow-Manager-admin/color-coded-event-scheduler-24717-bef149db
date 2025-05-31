@@ -92,24 +92,25 @@ export default function EventScheduler() {
   }
 
   function handleDateClick(info) {
-    // Open dialog for new event, with date pre-filled
+    // Open dialog for new event, with date pre-filled (yyyy-MM-dd)
     openDialog({
-      start: info.dateStr,
-      end: info.dateStr,
+      date: info.dateStr,
       isEdit: false,
     });
   }
 
   function handleEventClick(info) {
-    // Edit existing event
+    // Edit existing event (single date, populate fields)
     const ev = events.find(e => e.id === info.event.id);
     if (ev) {
+      // parse date part from start
+      let stripDate = (isoStr) =>
+        isoStr ? isoStr.slice(0, 10) : '';
       openDialog({
         isEdit: true,
         id: ev.id,
         title: ev.title,
-        start: ev.start.slice(0,16), // yyyy-MM-ddTHH:mm
-        end: ev.end.slice(0,16),
+        date: stripDate(ev.start),
         category: ev.category,
       });
     }
@@ -124,17 +125,18 @@ export default function EventScheduler() {
     e.preventDefault();
     // Validate
     const title = dialog.title.trim();
-    if (!title || !dialog.start || !dialog.end) return;
+    if (!title || !dialog.date) return;
 
-    const start = dialog.start;
-    const end = dialog.end;
-    if (new Date(start) > new Date(end)) return; // disallow invalid times
+    // generate ISO date string. Use date at midnight for all-day.
+    let eventDate = dialog.date; // yyyy-MM-dd
+    let isoStart = eventDate + "T00:00:00";
+    let isoEnd = eventDate + "T23:59:59"; // for 'end' field, not actually used by FullCalendar for one-day events
 
     if (dialog.isEdit) {
       setEvents(evts =>
         evts.map(ev =>
           ev.id === dialog.id
-            ? { ...ev, title, category: dialog.category, start, end }
+            ? { ...ev, title, category: dialog.category, start: isoStart, end: isoEnd }
             : ev
         )
       );
@@ -145,8 +147,8 @@ export default function EventScheduler() {
         {
           id: Math.random().toString(36).slice(2),
           title,
-          start,
-          end,
+          start: isoStart,
+          end: isoEnd,
           category: dialog.category,
         }
       ]);
