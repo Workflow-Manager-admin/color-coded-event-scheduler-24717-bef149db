@@ -261,16 +261,22 @@ export default function EventScheduler() {
           height="auto"
           editable
           selectable
-          eventColor=""
+          /*
+            We map each event to provide FullCalendar's supported styling properties:
+              - backgroundColor: main color fill for event
+              - borderColor: border, use same as fill for bold chips
+              - textColor: always white for max contrast
+              - className: For custom border highlight (category-Work, etc)
+          */
           events={filteredEvents.map(ev => ({
             ...ev,
             backgroundColor: getCategoryColor(ev.category),
             borderColor: getCategoryColor(ev.category),
             textColor: '#fff',
+            className: `event-category-${ev.category?.toLowerCase()}`,
           }))}
           dateClick={handleDateClick}
           eventClick={handleEventClick}
-          // themeSystem: none; we override via custom CSS for dark
         />
       </div>
 
