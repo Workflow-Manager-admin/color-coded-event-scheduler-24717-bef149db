@@ -277,6 +277,10 @@ export default function EventScheduler() {
           }))}
           dateClick={handleDateClick}
           eventClick={handleEventClick}
+          // Suppress all time displays in all views; only show event title, keep color
+          eventContent={renderOnlyTitle}
+          displayEventTime={false}
+          displayEventEnd={false}
         />
       </div>
 
