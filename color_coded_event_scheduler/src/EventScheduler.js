@@ -552,7 +552,10 @@ function inputStyle() {
   };
 }
 
-// Inline global style overrides for FullCalendar (minimal, dark theme with palette)
+/*
+  Inline global style overrides for FullCalendar (minimal, dark theme with palette)
+  Also, per-category color highlighting on events!
+*/
 function StyleOverridesPalette() {
   return (
     <style>{`
@@ -608,11 +611,39 @@ function StyleOverridesPalette() {
 .fc-day-today {
   background: #262641 !important;
 }
+
 .fc-event {
-  color: #fff;
+  color: #fff !important;
   font-weight: 500;
   border-width: 2px;
   border-style: solid;
+  /* let per-event color come via FullCalendar event object! */
+}
+
+/* Make per-category event border and shadow even more visible */
+.fc-event.event-category-work {
+  /* Work (blue) */
+  background: #1976d2 !important;
+  border-color: #1976d2 !important;
+  box-shadow: 0 0 6px #1976d299;
+}
+.fc-event.event-category-personal {
+  /* Personal (green) */
+  background: #43a047 !important;
+  border-color: #43a047 !important;
+  box-shadow: 0 0 6px #43a04799;
+}
+.fc-event.event-category-deadline {
+  /* Deadline (red) */
+  background: #d32f2f !important;
+  border-color: #d32f2f !important;
+  box-shadow: 0 0 8px #d32f2f88;
+}
+.fc-event:hover,
+.fc-event:focus {
+  filter: brightness(1.15) saturate(1.2);
+  box-shadow: 0 4px 28px #1976d240, 0 0 0 2px #fff1;
+  z-index: 2;
 }
 .fc-daygrid-event-dot {
   display: none;
