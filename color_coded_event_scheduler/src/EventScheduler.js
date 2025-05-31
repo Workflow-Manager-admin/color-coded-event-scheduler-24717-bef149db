@@ -231,10 +231,16 @@ export default function EventScheduler() {
               padding: '10px 18px',
               marginLeft: '1.2rem'
             }}
-            onClick={() => openDialog({ isEdit: false })}
-            aria-label="Create new event"
+            onClick={() =>
+              openDialog({
+                isEdit: false,
+                date: '',
+                category: 'Work'
+              })
+            }
+            aria-label="Create new task"
             tabIndex={0}
-          >+ New Event</button>
+          >+ New Task</button>
         </div>
       </div>
       {/* Calendar */}
@@ -279,7 +285,7 @@ export default function EventScheduler() {
               color: '#fff',
               padding: 24,
               minWidth: 320,
-              minHeight: 320,
+              minHeight: 280,
               borderRadius: 12,
               boxShadow: '0 2px 16px #0007',
               display: 'flex',
@@ -298,7 +304,7 @@ export default function EventScheduler() {
               <h3 style={{
                 margin: 0,
                 fontWeight: 500,
-              }}>{dialog.isEdit ? 'Edit Event' : 'New Event'}</h3>
+              }}>{dialog.isEdit ? 'Edit Task' : 'Add New Task'}</h3>
               <button type="button"
                 aria-label="Close dialog"
                 onClick={closeDialog}
@@ -318,34 +324,24 @@ export default function EventScheduler() {
                 autoFocus
                 style={inputStyle()}
                 required
-                placeholder="Event name"
+                placeholder="Task name"
                 maxLength={32}
               />
             </label>
-            <div style={{ display: 'flex', gap: 8 }}>
-              <label style={{ flex: 1, fontWeight: 500 }}>
-                Start
-                <input
-                  type="datetime-local"
-                  name="start"
-                  value={dialog.start}
-                  onChange={handleDialogChange}
-                  style={inputStyle()}
-                  required
-                />
-              </label>
-              <label style={{ flex: 1, fontWeight: 500 }}>
-                End
-                <input
-                  type="datetime-local"
-                  name="end"
-                  value={dialog.end}
-                  onChange={handleDialogChange}
-                  style={inputStyle()}
-                  required
-                />
-              </label>
-            </div>
+            <label style={{ fontWeight: 500 }}>
+              Date
+              <input
+                type="date"
+                name="date"
+                value={dialog.date}
+                onChange={handleDialogChange}
+                style={inputStyle()}
+                required
+                placeholder="Select date"
+                min={new Date().getFullYear() + '-01-01'}
+                max={(new Date().getFullYear() + 5) + '-12-31'}
+              />
+            </label>
             <fieldset style={{ border: 'none', margin: 0, padding: 0 }}>
               <div style={{
                 fontWeight: 500, marginBottom: 4, color: '#eee'
@@ -415,7 +411,7 @@ export default function EventScheduler() {
                   border: 0
                 }}
                 tabIndex={0}
-              >{dialog.isEdit ? 'Update' : 'Add'} Event</button>
+              >{dialog.isEdit ? 'Update' : 'Add'} Task</button>
             </div>
           </form>
         </DialogBackdrop>
