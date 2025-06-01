@@ -4,6 +4,9 @@
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
+  --work-color: #1976d2;
+  --personal-color: #43a047;
+  --deadline-color: #d32f2f;
 }
 
 body {
