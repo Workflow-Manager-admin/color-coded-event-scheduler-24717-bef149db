@@ -104,8 +104,146 @@ body {
 .btn:hover {
   background-color: #FF8B4D;
 }
-
 .btn-large {
   padding: 12px 24px;
   font-size: 1.1rem;
 }
+
+/* New styles for scheduler UI */
+.category-legend {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 8px 0;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.02);
+  font-size: 1rem;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.filter-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.checkbox-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event-dialog {
+  background: #232939;
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 34px 28px 24px 28px;
+  box-shadow: 0 8px 44px 0 rgba(0,0,0,0.26);
+  min-width: 330px;
+  z-index: 4002;
+  position: relative;
+}
+
+.dialog-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom:0;
+  background: rgba(24,24,34,0.52);
+  z-index: 4001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-dialog input, .event-dialog select {
+  padding: 9px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: #27303d;
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.event-dialog input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.event-dialog label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 1px;
+}
+
+/* Override for FullCalendar dark style */
+.fc {
+  background: transparent;
+  color: var(--text-color);
+}
+
+.fc-theme-standard .fc-scrollgrid,
+.fc-header-toolbar {
+  background: transparent;
+  border: none;
+}
+
+.fc .fc-toolbar-title {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.fc-daygrid-event, .fc-timegrid-event {
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  padding: 3px 8px;
+  filter: brightness(0.93);
+}
+
+.fc-day-today {
+  background-color: rgba(35, 75, 150, 0.08) !important;
+}
+
+.fc-button, .fc-button-primary {
+  background: var(--kavia-orange) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 4px !important;
+  transition: background 0.22s;
+}
+.fc-button-active, .fc-button-primary:focus, .fc-button-primary:active {
+  background: #FF8B4D !important;
+}
+
+.fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.calendar-container {
+  width: 100%;
+  min-height: 520px;
+}
+
+/* Category colors for events (used as fallback) */
+.fc-event[style*="background-color: #1976d2"], .fc-event-dot[style*="background-color: #1976d2"] { color: #fff; }
+.fc-event[style*="background-color: #43a047"], .fc-event-dot[style*="background-color: #43a047"] { color: #fff; }
+.fc-event[style*="background-color: #d32f2f"], .fc-event-dot[style*="background-color: #d32f2f"] { color: #fff; }
