@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./App.css";
-import "@fullcalendar/daygrid/index.css";
-import "@fullcalendar/timegrid/index.css";
+/* import "@fullcalendar/daygrid/index.css";
+import "@fullcalendar/timegrid/index.css"; */
+// To fix build error, skip plugin CSS imports (handled via custom App.css styling)
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
