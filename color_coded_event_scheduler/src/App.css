@@ -98,19 +98,24 @@ body {
 }
 
 .btn {
-  background-color: var(--base-light);
-  color: white;
+  background-color: var(--base-blue);
+  color: #fff;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background 0.2s;
 }
 
-.btn:hover {
-  background-color: #7691ff;
+.btn:hover, .btn:focus {
+  background: #115bb1;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 1.1rem;
 }
 
 .btn-large {
