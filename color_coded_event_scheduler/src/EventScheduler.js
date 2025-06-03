@@ -142,12 +142,21 @@ const EventScheduler = () => {
   // Only show filtered events
   const filteredEvents = events.filter(e => filter[e.category]);
 
-  // Custom event content - colored via category
+  // Custom event content - colored via category, with truncation and prevented overflow
   function renderEventContent(eventInfo) {
     const cat = CATEGORY_DEFINITIONS.find(c => c.key === eventInfo.event.extendedProps.category);
     return (
-      <div className="fc-event-content-wrapper" style={{ borderLeft: `6px solid ${cat ? cat.color : '#444'}` }}>
-        <span>{eventInfo.event.title}</span>
+      <div
+        className="fc-event-content-wrapper scheduler-event-contained"
+        style={{
+          borderLeft: `6px solid ${cat ? cat.color : '#444'}`,
+          background: 'inherit',
+        }}
+        title={eventInfo.event.title}
+      >
+        <span className="fc-event-title-text">
+          {eventInfo.event.title}
+        </span>
       </div>
     );
   }

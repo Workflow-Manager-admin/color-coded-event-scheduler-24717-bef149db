@@ -122,6 +122,49 @@
   font-size: 1rem;
 }
 
+/* Ensure FC events are visually contained within day cell */
+.scheduler-event-contained,
+.fc .fc-daygrid-event {
+  /* Prevent overflow visually and functionally */
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Highest specificity: Prevent any possible overflow from event title and content */
+.fc-event-title,
+.fc-event-title-text,
+.scheduler-event-contained span,
+.fc-event-content-wrapper span {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fc .fc-daygrid-event {
+  /* Remove unneeded left padding since border provides the highlight */
+  padding-left: 0;
+}
+
+/* Edge case: Stop event from showing outside cell if FC applies absolute/flexbox */
+.fc-daygrid-day-frame,
+.fc-daygrid-day-events,
+.fc-daygrid-event-harness {
+  overflow: hidden !important;
+}
+
+/* If user zooms, keep event strictly confined */
+.scheduler-event-contained {
+  min-width: 0;
+}
+
+
 .fc .fc-toolbar-title {
   color: #fff;
 }
