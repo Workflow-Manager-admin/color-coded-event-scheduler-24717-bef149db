@@ -24,10 +24,10 @@
 }
 
 .scheduler-filter, .scheduler-legend {
-  background: rgba(9, 34, 88, 0.28);
+  background: rgba(8, 37, 103, 0.44);
   border-radius: 8px;
   padding: 10px 18px;
-  box-shadow: 0 2px 14px -10px #114684;
+  box-shadow: 0 2px 14px -10px #1a1b50;
   display: flex;
   gap: 16px;
   align-items: center;
