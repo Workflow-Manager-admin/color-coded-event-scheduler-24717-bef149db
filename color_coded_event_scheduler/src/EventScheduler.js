@@ -42,7 +42,6 @@ function getInitialEvents() {
   ];
 }
 
-import React, { useState, useRef } from 'react';
 // PUBLIC_INTERFACE
 const EventScheduler = () => {
   // State
@@ -278,7 +277,6 @@ const EventScheduler = () => {
             style={{
               left: tooltip.x + 8,
               top: tooltip.y - 10 - 88 < 0 ? tooltip.y + 20 : tooltip.y - 88,
-              // Invert below event if not enough room above
               zIndex: 1500,
               pointerEvents: 'none',
             }}
