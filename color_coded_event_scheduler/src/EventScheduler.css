@@ -1,0 +1,205 @@
+.scheduler-root {
+  padding: 56px 0 32px 0;
+  min-height: 80vh;
+}
+
+.scheduler-title {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--base-light, #1976d2);
+  margin-bottom: 16px;
+  padding-top: 20px;
+}
+
+.scheduler-top-panel {
+  display: flex;
+  gap: 48px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  justify-content: flex-start;
+}
+
+.scheduler-filter, .scheduler-legend {
+  background: rgba(25,34,55,0.3);
+  border-radius: 8px;
+  padding: 10px 18px;
+  box-shadow: 0 2px 14px -10px #222;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.panel-label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-secondary, #cfd8dc);
+  margin-right: 12px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: #fff;
+  font-size: 0.97rem;
+  gap: 3px;
+  cursor: pointer;
+  margin: 0 8px 0 0;
+  accent-color: var(--cat-color, #888888);
+}
+.filter-checkbox input[type="checkbox"] {
+  accent-color: var(--cat-color, #888888);
+  margin-right: 6px;
+}
+
+.cat-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.scheduler-legend {
+  gap: 9px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-right: 12px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.25);
+}
+
+/* Calendar wrapper to allow modal overlay */
+.calendar-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* FullCalendar overrides/dark theme tweaks */
+.fc {
+  --fc-bg-event-opacity: 1;
+  --fc-event-bg-color: #262630;
+  --fc-event-border-color: #333;
+  --fc-event-text-color: #ffffff;
+  --fc-today-bg-color: rgba(25, 118, 210, 0.13);
+  background-color: var(--base-dark,#000021);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 16px 30px -20px #10102a;
+}
+
+.fc-event-content-wrapper {
+  padding: 2px 6px;
+  font-size: 1rem;
+}
+
+.fc .fc-toolbar-title {
+  color: var(--base-light, #1976d2);
+}
+.fc .fc-toolbar button {
+  background: var(--base-dark, #1A1A1A);
+  color: #fff;
+  border: 1px solid var(--border-color, #343353);
+}
+
+.fc .fc-daygrid-event {
+  border-radius: 6px;
+  padding-left: 0;
+}
+
+/* Modal dialog styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(12,12,22,0.66);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #262636;
+  color: #fff;
+  min-width: 340px;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px 2px #101024;
+  padding: 30px 26px 18px 26px;
+  z-index: 1002;
+  position: relative;
+  animation: fadeIn 0.15s;
+}
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.97);} to { opacity: 1; transform: scale(1);} }
+
+.modal h3 {
+  font-size: 1.38rem;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.form-group {
+  margin-bottom: 12px;
+}
+.form-group label {
+  font-size: 1rem;
+  color: var(--text-color, #fff);
+  display: block;
+}
+.form-group input,
+.form-group select {
+  margin-top: 4px;
+  margin-right: 16px;
+  background: #1b1b2c;
+  border: 1px solid #444860;
+  color: #fff;
+  padding: 8px 9px;
+  font-size: 1rem;
+  border-radius: 4px;
+  outline: none;
+  width: 96%;
+  box-sizing: border-box;
+}
+.form-group.half {
+  display: flex;
+  gap: 16px;
+}
+.form-group.half label {
+  width: 100%;
+}
+
+.modal-actions {
+  margin-top: 18px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.btn.primary {
+  background: #1976d2;
+}
+.btn.danger {
+  background: #d32f2f;
+}
+.btn.primary, .btn.danger {
+  color: white;
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
