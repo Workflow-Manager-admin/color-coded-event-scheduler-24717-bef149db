@@ -24,10 +24,10 @@
 }
 
 .scheduler-filter {
-  background: #123d73; /* Visually distinct blue for show bar (category filter bar) */
+  background: var(--showbar-blue);
   border-radius: 8px;
   padding: 10px 18px;
-  box-shadow: 0 2px 14px -10px #1a1b50;
+  box-shadow: 0 2px 14px -10px #162144;
   display: flex;
   gap: 16px;
   align-items: center;
@@ -35,10 +35,10 @@
 }
 
 .scheduler-legend {
-  background: #234a92; /* Distinct harmonious blue for legend bar */
+  background: var(--legendbar-blue);
   border-radius: 8px;
   padding: 10px 18px;
-  box-shadow: 0 2px 14px -10px #1a1b50;
+  box-shadow: 0 2px 14px -10px #1c2440;
   display: flex;
   gap: 16px;
   align-items: center;
