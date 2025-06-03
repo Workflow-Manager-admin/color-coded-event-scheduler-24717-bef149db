@@ -243,7 +243,7 @@
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(8, 37, 103, 0.82);
+  background: var(--modal-overlay-bg);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -251,17 +251,17 @@
 }
 
 .modal {
-  background: #082567;
+  background: var(--modal-bg);
   color: #fff;
   min-width: 340px;
   max-width: 500px;
   border-radius: 12px;
-  box-shadow: 0 6px 30px 2px #111858b2;
+  box-shadow: 0 6px 30px 2px #111b46b2;
   padding: 30px 26px 18px 26px;
   z-index: 1002;
   position: relative;
   animation: fadeIn 0.15s;
-  border: 1px solid #123d73;
+  border: 1px solid var(--btn-blue-hover);
 }
 @keyframes fadeIn { from { opacity: 0; transform: scale(0.97);} to { opacity: 1; transform: scale(1);} }
 
@@ -283,8 +283,8 @@
 .form-group select {
   margin-top: 4px;
   margin-right: 16px;
-  background: #123d73;
-  border: 1px solid #062159;
+  background: #192847;
+  border: 1px solid var(--border-color);
   color: #fff;
   padding: 8px 9px;
   font-size: 1rem;
@@ -313,7 +313,7 @@
   gap: 10px;
 }
 .btn.primary {
-  background: #082567 !important;
+  background: var(--base-blue) !important;
   color: #fff !important;
 }
 .btn.danger {
