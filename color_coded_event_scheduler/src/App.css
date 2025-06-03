@@ -1,10 +1,18 @@
 :root {
-  --base-blue: #082567;
-  --base-light: #082567;
-  --base-dark: #082567;
+  --base-blue: #010c24;
+  --base-light: #1c2940;       /* slightly lighter blue for containers/accents */
+  --base-dark: #010c24;
+  --showbar-blue: #143168;     /* harmonious, raised show bar/filter */
+  --legendbar-blue: #202e4f;   /* harmonious, distinct from show bar */
+  --btn-blue: #263d6e;         /* main buttons (default) */
+  --btn-blue-hover: #2f4b92;
+  --btn-newtask-blue: #356ac9; /* brighter for new task button */
+  --btn-newtask-blue-hover: #234a92;
+  --modal-overlay-bg: rgba(1,12,36,0.89);
+  --modal-bg: #101f40;
   --text-color: #ffffff;
   --text-secondary: rgba(255,255,255,0.92);
-  --border-color: rgba(16, 56, 107, 0.18);
+  --border-color: rgba(27, 56, 85, 0.18);
 }
 
 body {
@@ -14,6 +22,7 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 .app {
