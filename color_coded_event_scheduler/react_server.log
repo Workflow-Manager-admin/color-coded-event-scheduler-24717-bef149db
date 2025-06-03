@@ -26,3 +26,24 @@ ERROR in ./src/App.js 6:0-46
 Module not found: Error: Can't resolve './EventScheduler' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
 
 webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+WARNING in [eslint] 
+src/EventScheduler.js
+  Line 1:27:  'useRef' is defined but never used  no-unused-vars
+
+ERROR in ./src/EventScheduler.js 6:0-47
+Module not found: Error: Can't resolve '@fullcalendar/react' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 7:0-50
+Module not found: Error: Can't resolve '@fullcalendar/daygrid' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 8:0-58
+Module not found: Error: Can't resolve '@fullcalendar/interaction' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+ERROR in ./src/EventScheduler.js 9:0-30
+Module not found: Error: Can't resolve './EventScheduler.css' in '/home/kavia/workspace/code-generation/color-coded-event-scheduler-24717-bef149db/color_coded_event_scheduler/src'
+
+webpack compiled with 4 errors and 1 warning
