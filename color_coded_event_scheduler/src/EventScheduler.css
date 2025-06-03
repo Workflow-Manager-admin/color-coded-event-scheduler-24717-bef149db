@@ -329,11 +329,11 @@
   box-shadow: 0 2px 8px 0 #143c6e38;
   letter-spacing: 0.01em;
   transition: background 0.13s;
-  background: #355baa !important;   /* Harmonious blue for New Task button */
-  color: #fff !important;           /* Ensure strong contrast for readability */
+  background: var(--btn-newtask-blue) !important;   /* Harmonious bold blue */
+  color: #fff !important;
   font-weight: 600;
 }
 .btn-new-task:hover {
-  background: #234a92 !important;
+  background: var(--btn-newtask-blue-hover) !important;
   color: #fff !important;
 }
