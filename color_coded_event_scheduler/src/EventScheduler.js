@@ -249,7 +249,7 @@ const EventScheduler = () => {
           + New Task
         </button>
       </div>
-      <div className="calendar-wrapper">
+      <div className="calendar-wrapper" ref={calendarWrapperRef} style={{ position: 'relative' }}>
         <FullCalendar
           plugins={[dayGridPlugin, interactionPlugin]}
           headerToolbar={{
@@ -271,6 +271,55 @@ const EventScheduler = () => {
           eventContent={renderEventContent}
           height={600}
         />
+        {/* Tooltip overlay */}
+        {tooltip.visible && tooltip.event && (
+          <div
+            className="scheduler-tooltip"
+            style={{
+              left: tooltip.x + 8,
+              top: tooltip.y - 10 - 88 < 0 ? tooltip.y + 20 : tooltip.y - 88,
+              // Invert below event if not enough room above
+              zIndex: 1500,
+              pointerEvents: 'none',
+            }}
+            role="tooltip"
+          >
+            <div className="scheduler-tooltip-inner">
+              <div className="scheduler-tooltip-title">{tooltip.event.title}</div>
+              <div className="scheduler-tooltip-date">
+                📅 Date:{' '}
+                <span>
+                  {tooltip.event.start
+                    ? (typeof tooltip.event.start === 'string'
+                        ? tooltip.event.start
+                        : tooltip.event.start.toISOString().slice(0, 10))
+                    : ''}
+                </span>
+              </div>
+              <div className="scheduler-tooltip-category">
+                <span
+                  className="cat-dot"
+                  style={{
+                    background: getCategoryColor(
+                      tooltip.event.category || tooltip.event.extendedProps?.category
+                    ),
+                    marginRight: 6,
+                  }}
+                />
+                {CATEGORY_DEFINITIONS.find(
+                  c =>
+                    c.key === (tooltip.event.category || tooltip.event.extendedProps?.category)
+                )?.label || 'Other'}
+              </div>
+              <div className="scheduler-tooltip-desc">
+                {/* Show description if available in the event object, else placeholder */}
+                {tooltip.event.description
+                  ? tooltip.event.description
+                  : <span style={{ color: '#c2daff', fontSize: '.98em' }}>No description.</span>}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
       {/* Dialog Modal */}
       {dialogOpen && (
