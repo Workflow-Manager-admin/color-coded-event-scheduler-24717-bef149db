@@ -137,16 +137,17 @@
 }
 
 .modal {
-  background: #262636;
-  color: #fff;
+  background: #fff;
+  color: #212121;
   min-width: 340px;
   max-width: 500px;
   border-radius: 12px;
-  box-shadow: 0 4px 30px 2px #101024;
+  box-shadow: 0 6px 30px 2px #b6b6b6b2;
   padding: 30px 26px 18px 26px;
   z-index: 1002;
   position: relative;
   animation: fadeIn 0.15s;
+  border: 1px solid #e4e4e4;
 }
 @keyframes fadeIn { from { opacity: 0; transform: scale(0.97);} to { opacity: 1; transform: scale(1);} }
 
@@ -161,16 +162,16 @@
 }
 .form-group label {
   font-size: 1rem;
-  color: var(--text-color, #fff);
+  color: #25323e;
   display: block;
 }
 .form-group input,
 .form-group select {
   margin-top: 4px;
   margin-right: 16px;
-  background: #1b1b2c;
-  border: 1px solid #444860;
-  color: #fff;
+  background: #f6f8fa;
+  border: 1px solid #cdd2d7;
+  color: #26323e;
   padding: 8px 9px;
   font-size: 1rem;
   border-radius: 4px;
