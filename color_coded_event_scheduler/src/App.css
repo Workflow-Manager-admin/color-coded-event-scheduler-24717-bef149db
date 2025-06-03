@@ -33,7 +33,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--base-dark);
+  background-color: var(--base-blue);
   padding: 16px;
   display: flex;
   align-items: center;
