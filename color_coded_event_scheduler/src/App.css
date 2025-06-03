@@ -1,15 +1,16 @@
 :root {
-  --base-light: #00ffff;
-  --base-dark: #00008b;
+  --base-blue: #1976d2;
+  --base-light: #1976d2;
+  --base-dark: #1976d2;
   --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --text-secondary: rgba(255,255,255,0.92);
+  --border-color: rgba(16, 56, 107, 0.18);
 }
 
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--base-dark);
+  background-color: var(--base-blue);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,6 +20,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--base-blue);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
 }
 
 .navbar {
