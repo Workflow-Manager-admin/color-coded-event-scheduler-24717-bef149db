@@ -55,7 +55,7 @@ body {
 }
 
 .logo-symbol {
-  color: var(--base-light);
+  color: #fff;
 }
 
 .container {
@@ -77,7 +77,7 @@ body {
 }
 
 .subtitle {
-  color: var(--base-light);
+  color: #b3c6f9;
   font-weight: 500;
   font-size: 1.1rem;
 }
@@ -110,7 +110,7 @@ body {
 }
 
 .btn:hover, .btn:focus {
-  background: #115bb1;
+  background: #123d73;
 }
 
 .btn-large {
