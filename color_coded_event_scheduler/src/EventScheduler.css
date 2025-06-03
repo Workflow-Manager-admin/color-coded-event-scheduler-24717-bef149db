@@ -9,7 +9,7 @@
 .scheduler-title {
   font-size: 2.1rem;
   font-weight: 600;
-  color: var(--base-light, #1976d2);
+  color: #fff;
   margin-bottom: 16px;
   padding-top: 20px;
 }
@@ -37,7 +37,7 @@
 .panel-label {
   font-weight: 500;
   font-size: 1rem;
-  color: var(--text-secondary, #cfd8dc);
+  color: #e0edff;
   margin-right: 12px;
 }
 
@@ -112,19 +112,17 @@
 }
 
 .fc .fc-toolbar-title {
-  color: var(--base-light, #1976d2);
+  color: #fff;
 }
 .fc .fc-toolbar button {
-  background: var(--base-dark, #1A1A1A);
-  color: #fff;
-  border: 1px solid var(--border-color, #343353);
+  background: #135dc7 !important;
+  color: #fff !important;
+  border: 1px solid #164073 !important;
 }
-
 .fc .fc-daygrid-event {
   border-radius: 6px;
   padding-left: 0;
 }
-
 /* Modal dialog styles */
 .modal-overlay {
   position: fixed;
@@ -179,6 +177,10 @@
   width: 96%;
   box-sizing: border-box;
 }
+.form-group input::placeholder {
+  color: #e0edff;
+  opacity: 1;
+}
 .form-group.half {
   display: flex;
   gap: 16px;
@@ -208,12 +210,12 @@
 }
 
 .btn-new-task {
-  box-shadow: 0 2px 8px 0 #faeedb68;
+  box-shadow: 0 2px 8px 0 #143c6e38;
   letter-spacing: 0.01em;
   transition: background 0.13s;
 }
 
 .btn-new-task:hover {
-  background: #f9bb53 !important;
-  color: #181d1f !important;
+  background: #115bb1 !important;
+  color: #fff !important;
 }
