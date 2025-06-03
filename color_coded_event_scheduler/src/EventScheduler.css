@@ -1,6 +1,9 @@
 .scheduler-root {
   padding: 56px 0 32px 0;
   min-height: 80vh;
+  background: #f5f5f5;
+  border-radius: 14px;
+  box-sizing: border-box;
 }
 
 .scheduler-title {
@@ -89,17 +92,18 @@
   z-index: 1;
 }
 
-/* FullCalendar overrides/dark theme tweaks */
+/* FullCalendar overrides/light mode tweaks */
 .fc {
   --fc-bg-event-opacity: 1;
-  --fc-event-bg-color: #262630;
-  --fc-event-border-color: #333;
-  --fc-event-text-color: #ffffff;
-  --fc-today-bg-color: rgba(25, 118, 210, 0.13);
-  background-color: var(--base-dark,#000021);
-  color: white;
+  --fc-event-bg-color: #eceef0;
+  --fc-event-border-color: #ddd;
+  --fc-event-text-color: #333;
+  --fc-today-bg-color: #f1edea;
+  background-color: #ffffff;
+  color: #212121;
   border-radius: 10px;
-  box-shadow: 0px 16px 30px -20px #10102a;
+  box-shadow: 0px 8px 22px -10px #bbbfc2;
+  transition: background 0.18s;
 }
 
 .fc-event-content-wrapper {

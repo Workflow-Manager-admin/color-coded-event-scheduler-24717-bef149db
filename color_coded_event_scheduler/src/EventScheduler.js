@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
@@ -54,7 +54,7 @@ const EventScheduler = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogEvent, setDialogEvent] = useState(null);
 
-  // Open dialog for create/new event
+  // Open dialog for create/new event via calendar date click
   const handleDateSelect = (selectInfo) => {
     setDialogEvent({
       id: undefined,
@@ -125,6 +125,20 @@ const EventScheduler = () => {
     closeDialog();
   };
 
+  // Show the "New Task" modal (empty task, defaults to today, first category)
+  const showNewTaskDialog = () => {
+    // Today date for input[type=date]
+    const todayISO = new Date().toISOString().slice(0, 10);
+    setDialogEvent({
+      id: undefined,
+      title: '',
+      start: todayISO,
+      end: todayISO,
+      category: CATEGORY_DEFINITIONS[0].key,
+    });
+    setDialogOpen(true);
+  };
+
   // Only show filtered events
   const filteredEvents = events.filter(e => filter[e.category]);
 
@@ -141,38 +155,50 @@ const EventScheduler = () => {
   return (
     <div className="scheduler-root">
       <h2 className="scheduler-title">Event Scheduler</h2>
-      <div className="scheduler-top-panel">
-        <div className="scheduler-filter">
-          <span className="panel-label">Show:</span>
-          {CATEGORY_DEFINITIONS.map(cat => (
-            <label
-              key={cat.key}
-              className="filter-checkbox"
-              style={{ '--cat-color': cat.color }}
-            >
-              <input
-                type="checkbox"
-                checked={filter[cat.key]}
-                onChange={() => handleFilterChange(cat.key)}
-                style={{ accentColor: cat.color }}
-              />{' '}
-              <span className="cat-dot" style={{ background: cat.color }}></span>
-              {cat.label}
-            </label>
-          ))}
+      <div className="scheduler-top-panel" style={{ justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '26px' }}>
+        <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-end', flexWrap: 'wrap' }}>
+          <div className="scheduler-filter">
+            <span className="panel-label">Show:</span>
+            {CATEGORY_DEFINITIONS.map(cat => (
+              <label
+                key={cat.key}
+                className="filter-checkbox"
+                style={{ '--cat-color': cat.color }}
+              >
+                <input
+                  type="checkbox"
+                  checked={filter[cat.key]}
+                  onChange={() => handleFilterChange(cat.key)}
+                  style={{ accentColor: cat.color }}
+                />{' '}
+                <span className="cat-dot" style={{ background: cat.color }}></span>
+                {cat.label}
+              </label>
+            ))}
+          </div>
+          <div className="scheduler-legend">
+            <span className="panel-label">Legend:</span>
+            {CATEGORY_DEFINITIONS.map(cat => (
+              <span key={cat.key} className="legend-item">
+                <span
+                  className="legend-color"
+                  style={{ background: cat.color }}
+                ></span>
+                {cat.label}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="scheduler-legend">
-          <span className="panel-label">Legend:</span>
-          {CATEGORY_DEFINITIONS.map(cat => (
-            <span key={cat.key} className="legend-item">
-              <span
-                className="legend-color"
-                style={{ background: cat.color }}
-              ></span>
-              {cat.label}
-            </span>
-          ))}
-        </div>
+        <button
+          className="btn btn-large btn-new-task"
+          style={{
+            background: '#f7ac35', color: '#25323e', fontWeight: 600, borderRadius: 5, marginBottom: 4, minWidth: 120
+          }}
+          type="button"
+          onClick={showNewTaskDialog}
+        >
+          + New Task
+        </button>
       </div>
       <div className="calendar-wrapper">
         <FullCalendar
@@ -206,37 +232,32 @@ const EventScheduler = () => {
             role="dialog"
             aria-modal="true"
           >
-            <h3>{dialogEvent.id ? 'Edit Event' : 'New Event'}</h3>
+            <h3>
+              {dialogEvent.id
+                ? 'Edit Event'
+                : 'New Task'}
+            </h3>
             <div className="form-group">
               <label>
-                Title
+                Task Name
                 <input
                   type="text"
                   value={dialogEvent.title}
                   onChange={e => setDialogEvent(ev => ({ ...ev, title: e.target.value }))}
                   autoFocus
+                  placeholder="Enter task name"
                 />
               </label>
             </div>
             <div className="form-group half">
               <label>
-                Start
+                Date
                 <input
                   type="date"
                   value={dialogEvent.start}
-                  onChange={e => setDialogEvent(ev => ({ ...ev, start: e.target.value }))}
+                  onChange={e => setDialogEvent(ev => ({ ...ev, start: e.target.value, end: e.target.value }))}
                 />
               </label>
-              <label>
-                End
-                <input
-                  type="date"
-                  value={dialogEvent.end}
-                  onChange={e => setDialogEvent(ev => ({ ...ev, end: e.target.value }))}
-                />
-              </label>
-            </div>
-            <div className="form-group">
               <label>
                 Category
                 <select
@@ -261,7 +282,7 @@ const EventScheduler = () => {
                 onClick={handleDialogSave}
                 disabled={!dialogEvent.title || !dialogEvent.start || !dialogEvent.category}
               >
-                Save
+                OK
               </button>
             </div>
           </div>
