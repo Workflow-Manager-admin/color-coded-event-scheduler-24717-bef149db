@@ -129,7 +129,7 @@
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(12,12,22,0.66);
+  background: rgba(15,29,85,0.82);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -195,15 +195,13 @@
   gap: 10px;
 }
 .btn.primary {
-  background: #1976d2;
+  background: #1976d2 !important;
+  color: #fff !important;
 }
 .btn.danger {
-  background: #d32f2f;
+  background: #d32f2f !important;
+  color: #fff !important;
 }
-.btn.primary, .btn.danger {
-  color: white;
-}
-
 .btn[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
