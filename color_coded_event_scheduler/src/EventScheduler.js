@@ -42,6 +42,7 @@ function getInitialEvents() {
   ];
 }
 
+import React, { useState, useRef } from 'react';
 // PUBLIC_INTERFACE
 const EventScheduler = () => {
   // State
@@ -53,6 +54,36 @@ const EventScheduler = () => {
   });
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogEvent, setDialogEvent] = useState(null);
+
+  // --- Tooltip State ---
+  const [tooltip, setTooltip] = useState({ visible: false, event: null, x: 0, y: 0 });
+  const calendarWrapperRef = useRef(null);
+
+  // Helper to find event full details by id (for showing tooltip - if more data in future)
+  const getEventDetails = (id) => {
+    return events.find(e => e.id === id);
+  };
+
+  // --- Tooltip Handlers ---
+  function handleEventMouseEnter(mouseEvent, eventInfo) {
+    const domRect = calendarWrapperRef.current?.getBoundingClientRect?.() || { left: 0, top: 0 };
+    // Get mouse position relative to calendar container for positioning
+    const mouseX = mouseEvent.clientX - domRect.left;
+    const mouseY = mouseEvent.clientY - domRect.top;
+
+    // Find the event for more details
+    const eventData = getEventDetails(eventInfo.event.id);
+
+    setTooltip({
+      visible: true,
+      event: eventData || eventInfo.event,
+      x: mouseX,
+      y: mouseY,
+    });
+  }
+  function handleEventMouseLeave() {
+    setTooltip({ visible: false, event: null, x: 0, y: 0 });
+  }
 
   // Open dialog for create/new event via calendar date click
   const handleDateSelect = (selectInfo) => {
@@ -142,17 +173,26 @@ const EventScheduler = () => {
   // Only show filtered events
   const filteredEvents = events.filter(e => filter[e.category]);
 
-  // Custom event content - colored via category, with truncation and prevented overflow
+  // Custom event content with tooltip bindings
   function renderEventContent(eventInfo) {
     const cat = CATEGORY_DEFINITIONS.find(c => c.key === eventInfo.event.extendedProps.category);
+    // If events are enhanced to include description, can display here; fall back for now
+    const eventId = eventInfo.event.id;
     return (
       <div
         className="fc-event-content-wrapper scheduler-event-contained"
         style={{
           borderLeft: `6px solid ${cat ? cat.color : '#444'}`,
           background: 'inherit',
+          position: 'relative',
         }}
         title={eventInfo.event.title}
+        // Mouse events attached to event node
+        onMouseEnter={e => handleEventMouseEnter(e, eventInfo)}
+        onMouseLeave={handleEventMouseLeave}
+        tabIndex={0}
+        onFocus={e => handleEventMouseEnter(e, eventInfo)}
+        onBlur={handleEventMouseLeave}
       >
         <span className="fc-event-title-text">
           {eventInfo.event.title}
