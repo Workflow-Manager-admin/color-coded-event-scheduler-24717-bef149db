@@ -92,17 +92,17 @@
   z-index: 1;
 }
 
-/* FullCalendar overrides/light mode tweaks */
+/* FullCalendar overrides/dark blue monochrome mode */
 .fc {
   --fc-bg-event-opacity: 1;
-  --fc-event-bg-color: #eceef0;
-  --fc-event-border-color: #ddd;
-  --fc-event-text-color: #333;
-  --fc-today-bg-color: #f1edea;
-  background-color: #ffffff;
-  color: #212121;
+  --fc-event-bg-color: #1560aa !important;
+  --fc-event-border-color: #1976d2 !important;
+  --fc-event-text-color: #fff !important;
+  --fc-today-bg-color: #165cb5 !important;
+  background-color: #1976d2 !important;
+  color: #fff !important;
   border-radius: 10px;
-  box-shadow: 0px 8px 22px -10px #bbbfc2;
+  box-shadow: 0px 8px 22px -10px #164d90;
   transition: background 0.18s;
 }
 
