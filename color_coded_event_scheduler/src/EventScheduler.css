@@ -92,17 +92,17 @@
   z-index: 1;
 }
 
-/* FullCalendar overrides/dark blue monochrome mode */
+/* FullCalendar overrides/monotone dark blue */
 .fc {
   --fc-bg-event-opacity: 1;
-  --fc-event-bg-color: #1560aa !important;
-  --fc-event-border-color: #1976d2 !important;
+  --fc-event-bg-color: #123d73 !important;
+  --fc-event-border-color: #082567 !important;
   --fc-event-text-color: #fff !important;
-  --fc-today-bg-color: #165cb5 !important;
-  background-color: #1976d2 !important;
+  --fc-today-bg-color: #254e8a !important;
+  background-color: #082567 !important;
   color: #fff !important;
   border-radius: 10px;
-  box-shadow: 0px 8px 22px -10px #164d90;
+  box-shadow: 0px 8px 22px -10px #0d3265;
   transition: background 0.18s;
 }
 
@@ -127,7 +127,7 @@
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(15,29,85,0.82);
+  background: rgba(8, 37, 103, 0.82);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -135,17 +135,17 @@
 }
 
 .modal {
-  background: #1976d2;
+  background: #082567;
   color: #fff;
   min-width: 340px;
   max-width: 500px;
   border-radius: 12px;
-  box-shadow: 0 6px 30px 2px #143c6eb2;
+  box-shadow: 0 6px 30px 2px #111858b2;
   padding: 30px 26px 18px 26px;
   z-index: 1002;
   position: relative;
   animation: fadeIn 0.15s;
-  border: 1px solid #135dc7;
+  border: 1px solid #123d73;
 }
 @keyframes fadeIn { from { opacity: 0; transform: scale(0.97);} to { opacity: 1; transform: scale(1);} }
 
