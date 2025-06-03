@@ -208,3 +208,14 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.btn-new-task {
+  box-shadow: 0 2px 8px 0 #faeedb68;
+  letter-spacing: 0.01em;
+  transition: background 0.13s;
+}
+
+.btn-new-task:hover {
+  background: #f9bb53 !important;
+  color: #181d1f !important;
+}
