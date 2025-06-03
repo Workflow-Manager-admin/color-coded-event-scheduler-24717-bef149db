@@ -167,8 +167,8 @@
 .form-group select {
   margin-top: 4px;
   margin-right: 16px;
-  background: #165cb5;
-  border: 1px solid #093171;
+  background: #123d73;
+  border: 1px solid #062159;
   color: #fff;
   padding: 8px 9px;
   font-size: 1rem;
@@ -178,7 +178,7 @@
   box-sizing: border-box;
 }
 .form-group input::placeholder {
-  color: #e0edff;
+  color: #bed6ff;
   opacity: 1;
 }
 .form-group.half {
