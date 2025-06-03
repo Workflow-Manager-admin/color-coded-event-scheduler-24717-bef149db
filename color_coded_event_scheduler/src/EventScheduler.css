@@ -23,8 +23,19 @@
   justify-content: flex-start;
 }
 
-.scheduler-filter, .scheduler-legend {
-  background: rgba(8, 37, 103, 0.44);
+.scheduler-filter {
+  background: #123d73; /* Visually distinct blue for show bar (category filter bar) */
+  border-radius: 8px;
+  padding: 10px 18px;
+  box-shadow: 0 2px 14px -10px #1a1b50;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.scheduler-legend {
+  background: #234a92; /* Distinct harmonious blue for legend bar */
   border-radius: 8px;
   padding: 10px 18px;
   box-shadow: 0 2px 14px -10px #1a1b50;
